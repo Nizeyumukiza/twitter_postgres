@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# reset denormalized tables
+
+docker-compose exec pg_denormalized psql -f services/pg_denormalized/schema.sql
+
 # list all of the files that will be loaded into the database
 # for the first part of this assignment, we will only load a small test zip file with ~10000 tweets
 # but we will write are code so that we can easily load an arbitrary number of files

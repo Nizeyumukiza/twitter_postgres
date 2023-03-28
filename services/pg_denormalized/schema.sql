@@ -1,5 +1,8 @@
 \set ON_ERROR_STOP on
 
+--drop all tables
+drop table tweets_jsonb cascade;
+
 BEGIN;
 
 --------------------------------------------------------------------------------    
